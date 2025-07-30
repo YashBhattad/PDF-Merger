@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-PDF Merger - Combine Multiple PDFs</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📄 Multi-PDF Merger</h1>
+        <p class="subtitle">Combine multiple PDF files into one seamlessly</p>
+        
+        <div class="upload-section">
+            <div class="file-input-container">
+                <input type="file" id="pdfFiles" class="file-input" accept=".pdf" multiple>
+                <label for="pdfFiles" class="file-label" id="fileLabel">
+                    <span class="file-icon">📚</span>
+                    <div class="file-text">Choose PDF Files</div>
+                    <div class="file-subtext">Click to select multiple PDF files or drag & drop them here</div>
+                    <div class="file-count" id="fileCount" style="display: none;"></div>
+                </label>
+            </div>
+            
+            <div class="pdf-list" id="pdfList" style="display: none;"></div>
+        </div>
+        
+        <div class="control-buttons">
+            <button class="btn merge-btn" id="mergeBtn" disabled onclick="mergePDFs()">
+                <span id="btnText">📎 Merge PDFs</span>
+            </button>
+            <button class="btn clear-btn" onclick="clearAllFiles()">
+                🗑️ Clear All
+            </button>
+        </div>
+        
+        <div class="status" id="status"></div>
+        
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">🔒</span>
+                <span>100% secure - all processing happens in your browser</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">⚡</span>
+                <span>Fast merging of multiple PDFs in order</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🔄</span>
+                <span>Drag and drop to reorder files before merging</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🆓</span>
+                <span>Completely free with no file limits</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
